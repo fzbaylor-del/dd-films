@@ -69,17 +69,27 @@
   text-align: right;
 }
 
-.service__investment {
+.service__outcome {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-style: italic;
+  font-size: 1.2rem;
   color: var(--forest-deep);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
 }
 
-.service__note {
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-  margin-left: auto;
+.service__link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--amber-deep);
+  border-bottom: 1px solid var(--amber);
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+
+.service__link:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
 }
 
 @media (max-width: 900px) {
@@ -89,10 +99,6 @@
 
   .service__price {
     text-align: left;
-  }
-
-  .service__note {
-    margin-left: 0;
   }
 
   .service__includes {

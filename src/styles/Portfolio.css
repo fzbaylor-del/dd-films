@@ -1,0 +1,65 @@
+.portfolio-hero__headline {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  max-width: 18ch;
+  margin: 0.4rem 0 1.2rem;
+}
+
+.portfolio-hero__lead {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 52ch;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.portfolio-card__thumb {
+  aspect-ratio: 4 / 3;
+  background: var(--ink);
+  border: 1px dashed var(--line-on-dark);
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.portfolio-card__thumb span {
+  color: rgba(251, 248, 241, 0.5);
+  font-size: 0.85rem;
+}
+
+.portfolio-card__service {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--amber-deep);
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.portfolio-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.portfolio-card__industry {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}

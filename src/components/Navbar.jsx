@@ -5,6 +5,7 @@ import '../styles/Navbar.css';
 const LINKS = [
   { to: '/', label: 'Home' },
   { to: '/services', label: 'Services' },
+  { to: '/portfolio', label: 'Portfolio' },
   { to: '/industries', label: 'Industries' },
   { to: '/contact', label: 'Contact' },
 ];

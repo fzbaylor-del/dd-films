@@ -17,23 +17,27 @@ export default function Home() {
       <section className="hero">
         <div className="container hero__grid">
           <div>
-            <p className="eyebrow">Kigali, Rwanda</p>
+            <p className="eyebrow">Kigali, Rwanda — for organisations building Africa</p>
             <h1 className="hero__headline">
-              Telling vivid African stories through our lenses.
+              Every organisation has a story. <span className="hero__highlight">Most never get told.</span>
             </h1>
             <p className="hero__lead">
-              DD Films and Media is a new film and media company producing corporate films, documentaries
-              and digital content for organisations building Africa and telling its stories to the world.
+              We're the film crew banks, telecoms, NGOs and hotel groups across Africa call when the story
+              is too important to leave to a phone camera. Corporate films, documentaries and digital
+              content — shot to move the people who decide whether to trust you, invest in you, or work
+              with you.
             </p>
             <div className="hero__actions">
               <Link to="/contact" className="btn btn--primary">Tell us your story</Link>
-              <Link to="/services" className="btn btn--outline">See our services</Link>
+              <Link to="/portfolio" className="btn btn--outline">See our work</Link>
             </div>
           </div>
+
           <div className="hero__frame">
             <img
               src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80"
-              alt="Film production in Africa"
+              alt="Film production"
+              className="hero__frame-img"
             />
             <div className="hero__frame-overlay">
               <span>Vision</span>
@@ -43,19 +47,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHAT WE DO */}
+      {/* STATS */}
+      <section className="stats">
+        <div className="container stats__row">
+          <div className="stats__item">
+            <p className="stats__number">06</p>
+            <p className="stats__label">Industries we serve</p>
+          </div>
+          <div className="stats__item">
+            <p className="stats__number">04</p>
+            <p className="stats__label">Signature services</p>
+          </div>
+          <div className="stats__item">
+            <p className="stats__number">01</p>
+            <p className="stats__label">Studio in Kigali, Rwanda</p>
+          </div>
+          <div className="stats__item">
+            <p className="stats__number">∞</p>
+            <p className="stats__label">Stories waiting to be told</p>
+          </div>
+        </div>
+      </section>
+
+      {/* WHO WE ARE */}
       <section className="section">
         <div className="container who__grid">
           <div>
-            <p className="eyebrow">What we do</p>
+            <p className="eyebrow">Who we are</p>
             <h2 className="who__heading">
               Corporate films, documentaries and visual storytelling, made in Africa.
             </h2>
           </div>
           <div className="who__body">
             <p>
-              We produce corporate films, impact documentaries, event content and ongoing digital content
-              for organisations across Africa.
+              We produce corporate films, impact documentaries, event content and ongoing digital
+              content for organisations across Africa.
             </p>
             <p>
               We work with businesses, development organisations, institutions and entrepreneurs to
@@ -100,14 +126,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* INDUSTRIES TEASER */}
+      <section className="section industries-teaser">
+        <div className="container">
+          <p className="eyebrow">Who we work with</p>
+          <h2 className="industries-teaser__heading">See yourself in the room?</h2>
+          <div className="industries-teaser__grid">
+            {[
+              'Financial Services & Fintech',
+              'Technology & Telecommunications',
+              'Infrastructure & Construction',
+              'Tourism & Hospitality',
+              'Mining & Manufacturing',
+              'NGOs & Development',
+            ].map((name) => (
+              <Link to="/industries" className="industries-teaser__pill" key={name}>
+                {name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section cta">
         <div className="container cta__row">
           <div>
             <h2 className="cta__headline">Your story deserves to be told.</h2>
             <p>
-              Whether you're building a company, launching a project, developing infrastructure, creating
-              social impact or transforming lives across Africa — let's talk.
+              Whether you're building a company, launching a project, developing infrastructure,
+              creating social impact or transforming lives across Africa — let's talk.
             </p>
           </div>
           <Link to="/contact" className="btn btn--primary">Start a conversation</Link>

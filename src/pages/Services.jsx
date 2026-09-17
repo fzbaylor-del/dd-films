@@ -15,8 +15,7 @@ const SERVICES = [
       'YouTube and LinkedIn-ready versions',
       'Content strategy',
     ],
-    investment: 'From $7,500',
-    note: 'Final investment depends on production requirements, locations, crew and deliverables.',
+    outcome: 'One campaign, built to carry your brand across every boardroom and every feed.',
   },
   {
     name: 'Corporate Content Partner',
@@ -30,8 +29,7 @@ const SERVICES = [
       'LinkedIn content & YouTube editing',
       'Monthly content strategy and planning',
     ],
-    investment: 'From $3,500/month',
-    note: '3-month minimum: $10,500. Custom packages available for larger organisations.',
+    outcome: 'A content engine that never goes quiet — so your brand stays top of mind, month after month.',
   },
   {
     name: 'Event Content Experience',
@@ -46,8 +44,7 @@ const SERVICES = [
       '10–15 short-form reels',
       'Event after-movie',
     ],
-    investment: 'From $3,500',
-    note: 'Custom packages available depending on event size, duration and location.',
+    outcome: "Your event, still working the room weeks after everyone's gone home.",
   },
   {
     name: 'Premium Africa Impact Documentary',
@@ -60,8 +57,7 @@ const SERVICES = [
       'Stakeholder engagement',
       'Campaigns and public awareness',
     ],
-    investment: 'From $7,500',
-    note: 'Large-scale productions are quoted separately.',
+    outcome: 'The kind of film that moves a donor, an investor or a boardroom to act.',
   },
 ];
 
@@ -73,8 +69,8 @@ export default function Services() {
           <p className="eyebrow">What we offer</p>
           <h1 className="services-hero__headline">Four ways to tell your story, built around your goals.</h1>
           <p className="services-hero__lead">
-            From a single corporate film to an ongoing content partnership, each service is scoped around
-            your organisation's audience, timeline and impact.
+            From a single corporate film to an ongoing content partnership, each service is scoped
+            around your organisation's audience, timeline and impact.
           </p>
         </div>
       </section>
@@ -94,8 +90,8 @@ export default function Services() {
                 </ul>
               </div>
               <div className="service__price">
-                <p className="service__investment">{service.investment}</p>
-                <p className="service__note">{service.note}</p>
+                <p className="service__outcome">{service.outcome}</p>
+                <Link to="/contact" className="service__link">Discuss this project →</Link>
               </div>
             </article>
           ))}
