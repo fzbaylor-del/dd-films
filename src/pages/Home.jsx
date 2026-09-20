@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
+import visionImage from '../assets/vision.jpg';
+import reelVideo from '../assets/reel.mp4';
 
 const REASONS = [
   { title: 'An African perspective', body: 'We understand Africa, its people, its challenges, its opportunities and its stories.' },
@@ -35,8 +37,8 @@ export default function Home() {
 
           <div className="hero__frame">
             <img
-              src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80"
-              alt="Film production"
+              src={visionImage}
+              alt="Film production crew filming a documentary in Africa"
               className="hero__frame-img"
             />
             <div className="hero__frame-overlay">
