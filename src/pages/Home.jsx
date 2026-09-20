@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 import visionImage from '../assets/vision.jpg';
-import reelVideo from '../assets/reel.mp4';
 
 const REASONS = [
   { title: 'An African perspective', body: 'We understand Africa, its people, its challenges, its opportunities and its stories.' },
