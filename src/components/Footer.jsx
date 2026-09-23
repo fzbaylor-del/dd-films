@@ -23,7 +23,20 @@ export default function Footer() {
         <div className="footer__col">
           <p className="footer__heading">Get in touch</p>
           <a href="mailto:hello@ddfilmsandmedia.com">hello@ddfilmsandmedia.com</a>
-          <a href="tel:+250000000000">+250 000 000 000</a>
+          <a
+            href="https://wa.me/27735349749"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            +27 73 534 9749
+          </a>
+          <a
+            href="https://wa.me/250785351360"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            +250 785 351 360
+          </a>
         </div>
       </div>
 

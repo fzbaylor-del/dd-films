@@ -6,8 +6,10 @@ const SERVICE_OPTIONS = [
   'Corporate Content Partner',
   'Event Content Experience',
   'Premium Africa Impact Documentary',
-  "Not sure yet",
+  'Not sure yet',
 ];
+
+const WHATSAPP_NUMBER = '250785351360'; // +250 785 351 360 — no +, no spaces
 
 const initialForm = {
   name: '',
@@ -28,8 +30,23 @@ export default function Contact() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    // TODO: wire this up to your email service or backend endpoint.
-    // For now this simply confirms receipt in the UI.
+
+    // Build the WhatsApp message from the form fields
+    const text = [
+      `New enquiry from DD Films website`,
+      ``,
+      `Name: ${form.name}`,
+      `Organisation: ${form.organisation}`,
+      `Email: ${form.email}`,
+      `Service: ${form.service}`,
+      ``,
+      `Message:`,
+      form.message,
+    ].join('\n');
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+
     setStatus('sent');
   }
 
@@ -50,11 +67,25 @@ export default function Contact() {
             </div>
             <div>
               <p className="contact__label">Email</p>
-              <a href="mailto:hello@ddfilmsandmedia.com">hello@ddfilmsandmedia.com</a>
+              <a href="mailto:hello@ddfilmsandmedia.org">hello@ddfilmsandmedia.org</a>
             </div>
             <div>
-              <p className="contact__label">Phone</p>
-              <a href="tel:+250000000000">+250 000 000 000</a>
+              <p className="contact__label">WhatsApp</p>
+              <a
+                href="https://wa.me/27735349749"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +27 73 534 9749
+              </a>
+              <br />
+              <a
+                href="https://wa.me/250785351360"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +250 785 351 360
+              </a>
             </div>
           </div>
         </div>
@@ -62,9 +93,18 @@ export default function Contact() {
         <div className="contact__form-wrap">
           {status === 'sent' ? (
             <div className="contact__success">
-              <h2>Message received.</h2>
-              <p>Thank you for reaching out — we'll get back to you within two business days.</p>
-              <button className="button button--outline" onClick={() => { setForm(initialForm); setStatus('idle'); }}>
+              <h2>Almost done.</h2>
+              <p>
+                WhatsApp should have opened in a new tab with your message ready to send.
+                Just hit send and we'll get back to you shortly.
+              </p>
+              <button
+                className="button button--outline"
+                onClick={() => {
+                  setForm(initialForm);
+                  setStatus('idle');
+                }}
+              >
                 Send another message
               </button>
             </div>
@@ -99,7 +139,7 @@ export default function Contact() {
                 <textarea id="message" name="message" rows="5" required value={form.message} onChange={handleChange} />
               </div>
 
-              <button type="submit" className="button button--primary">Send message</button>
+              <button type="submit" className="button button--primary">Send via WhatsApp</button>
             </form>
           )}
         </div>
