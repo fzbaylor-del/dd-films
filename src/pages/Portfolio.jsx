@@ -34,7 +34,7 @@ const PROJECTS = [
     title: 'Africa Day 2022',
     industry: 'NGOs & Development',
     service: 'Event Highlight Reel',
-    location: 'Kigali, Rwanda',
+    
     video:
       'https://res.cloudinary.com/aj7immgb/video/upload/v1790087711/AFRICA_DAY_2022_HIGHLIGHT.mp4',
   },
